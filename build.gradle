@@ -15,7 +15,8 @@ buildscript {
                     logging_interceptor_version      : "3.10.0",
                     glide_version                    : "3.7.0",
                     glide_okhttp3_interceptor_version: "1.4.0@aar",
-                    gson_version                     : "2.8.5"
+                    gson_version                     : "2.8.5",
+                    dagger_version                   : "2.16"
     ]
 
     ext.SupportLib = [
@@ -57,6 +58,14 @@ buildscript {
 
     ext.GSONLib = [
             gson: "com.google.code.gson:gson:${versions.gson_version}"
+    ]
+
+    ext.Dagger2 = [
+            dagger2                : "com.google.dagger:dagger:${versions.dagger_version}",
+            dagger2Android         : "com.google.dagger:dagger-android:${versions.dagger_version}",
+            dagger2AndroidSupport  : "com.google.dagger:dagger-android-support:${versions.dagger_version}",
+            dagger2AndroidProcessor: "com.google.dagger:dagger-android-processor:${versions.dagger_version}",
+            dagger2Compiler        : "com.google.dagger:dagger-compiler:${versions.dagger_version}"
     ]
 
     repositories {

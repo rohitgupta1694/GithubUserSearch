@@ -1,7 +1,8 @@
-package com.github.usersearch
+package com.github.usersearch.ui.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.github.usersearch.R
 
 class MainActivity : AppCompatActivity() {
 

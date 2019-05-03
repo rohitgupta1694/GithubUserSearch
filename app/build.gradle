@@ -99,6 +99,14 @@ dependencies {
 
     //endregion
 
+    //region Dagger 2 Dependencies
+
+    implementation Dagger2.dagger2Android
+    implementation Dagger2.dagger2AndroidSupport
+    kapt Dagger2.dagger2AndroidProcessor
+
+    //endregion
+
     //region Testing Libraries
 
     testImplementation 'junit:junit:4.12'
