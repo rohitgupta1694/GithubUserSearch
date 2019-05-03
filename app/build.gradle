@@ -102,9 +102,11 @@ dependencies {
 
     //region Dagger 2 Dependencies
 
+    implementation Dagger2.dagger2
     implementation Dagger2.dagger2Android
     implementation Dagger2.dagger2AndroidSupport
     kapt Dagger2.dagger2AndroidProcessor
+    kapt Dagger2.dagger2Compiler
 
     //endregion
 
