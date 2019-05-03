@@ -2,14 +2,16 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
+apply plugin: 'kotlin-kapt'
+
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.sample.rohit.githubusersearch"
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -29,14 +31,80 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //region Android Support Libraries
+
+    implementation SupportLib.support_annotations
+    implementation SupportLib.support_appcompat
+    implementation SupportLib.support_design
+    implementation SupportLib.support_cardview
+    implementation SupportLib.support_constraint_layout
+
+    //endregion
+
+    //region Kotlin Library
+
+    implementation KotlinLib.kotlin_stdlib_JDK8
+
+    //endregion
+
+    //region Rx Libraries
+
+    implementation Rx.rxjava
+    implementation Rx.rxandroid
+
+    //endregion
+
+    //region Retrofit Libraries
+
+    implementation Retrofit2Lib.retrofit
+    implementation Retrofit2Lib.retrofit_gson_converter
+    implementation Retrofit2Lib.retrofit_rxjava2_adapter
+    implementation Retrofit2Lib.okhttp_logging_interceptor
+
+    //endregion
+
+    //region RxBinding Libraries
+
+    implementation RxBinding2Lib.rxbinding
+    implementation RxBinding2Lib.rxbinding_recyclerview_v7
+    implementation RxBinding2Lib.rxbinding_design
+    implementation RxBinding2Lib.rxbinding_appcompat_v7
+
+    //endregion
+
+    //region Glide Libraries
+
+    implementation GlideLib.glide
+    implementation GlideLib.glide_okhttp3_interceptor
+
+    //endregion
+
+    //region GSON Library
+
+    implementation GSONLib.gson
+
+    //endregion
+
+    //region Rounded ImageView Dependency
+
+    implementation 'com.joooonho:selectableroundedimageview:1.0.1'
+
+    //endregion
+
+    //region Testing Libraries
+
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'androidx.test:runner:1.2.0-alpha05'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha05'
+
+    //endregion
+
 }
