@@ -23,7 +23,7 @@ class RetrofitConfigModule {
 
     @Provides
     @Singleton
-    internal fun provideGson(): Gson {
+    fun provideGson(): Gson {
         val gsonBuilder = GsonBuilder()
         gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
         return gsonBuilder.create()
@@ -39,7 +39,7 @@ class RetrofitConfigModule {
 
     @Provides
     @Singleton
-    internal fun provideOkhttpCache(applicationContext: Context): Cache {
+    fun provideOkhttpCache(applicationContext: Context): Cache {
         return Cache(applicationContext.cacheDir, CACHE_SIZE)
     }
 

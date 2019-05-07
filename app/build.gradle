@@ -83,7 +83,7 @@ dependencies {
     //region Glide Libraries
 
     implementation GlideLib.glide
-    implementation GlideLib.glide_okhttp3_interceptor
+//    implementation GlideLib.glide_okhttp3_interceptor
     kapt GlideLib.glide_compiler
 
     //endregion

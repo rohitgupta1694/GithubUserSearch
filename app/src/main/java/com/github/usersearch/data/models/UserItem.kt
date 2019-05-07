@@ -1,4 +1,4 @@
-package com.rohit.githubusersearchmvi.data.models
+package com.github.usersearch.data.models
 
 import com.google.gson.annotations.SerializedName
 

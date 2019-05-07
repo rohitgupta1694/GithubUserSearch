@@ -1,4 +1,4 @@
-package com.rohit.githubusersearchmvi.data.models
+package com.github.usersearch.data.models
 
 import com.google.gson.annotations.SerializedName
 
@@ -10,6 +10,6 @@ data class GithubUserResponse(
     @SerializedName("incomplete_results")
     val incompleteResults: Boolean? = null,
 
-    @SerializedName("user")
-    val user: List<UserItem?>? = null
+    @SerializedName("items")
+    val user: List<UserItem>
 )
