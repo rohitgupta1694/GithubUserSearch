@@ -23,7 +23,6 @@ buildscript {
             support_annotations      : "androidx.annotation:annotation:${versions.android_x_support_lib}",
             support_appcompat        : "androidx.appcompat:appcompat:${versions.android_x_support_lib}",
             support_design           : "com.google.android.material:material:${versions.material_design_version}",
-            support_cardview         : "androidx.cardview:cardview:${versions.android_x_support_lib}",
             support_constraint_layout: "androidx.constraintlayout:constraintlayout:${versions.constraint_layout_version}"
     ]
 
@@ -40,11 +39,7 @@ buildscript {
     ]
 
     ext.RxBinding2Lib = [
-            rxbinding                : "com.jakewharton.rxbinding2:rxbinding:${versions.rxbinding}",
-            rxbinding_recyclerview_v7: "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:${versions.rxbinding}",
-            rxbinding_design         : "com.jakewharton.rxbinding2:rxbinding-design:${versions.rxbinding}",
-            rxbinding_appcompat_v7   : "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${versions.rxbinding}",
-            rxbinding_support_v4     : "com.jakewharton.rxbinding2:rxbinding-support-v4:${versions.rxbinding}"
+            rxbinding                : "com.jakewharton.rxbinding2:rxbinding:${versions.rxbinding}"
     ]
 
     ext.KotlinLib = [

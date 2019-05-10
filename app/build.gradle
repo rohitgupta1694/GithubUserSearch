@@ -44,7 +44,6 @@ dependencies {
     implementation SupportLib.support_annotations
     implementation SupportLib.support_appcompat
     implementation SupportLib.support_design
-    implementation SupportLib.support_cardview
     implementation SupportLib.support_constraint_layout
 
     //endregion
@@ -74,9 +73,6 @@ dependencies {
     //region RxBinding Libraries
 
     implementation RxBinding2Lib.rxbinding
-    implementation RxBinding2Lib.rxbinding_recyclerview_v7
-    implementation RxBinding2Lib.rxbinding_design
-    implementation RxBinding2Lib.rxbinding_appcompat_v7
 
     //endregion
 
