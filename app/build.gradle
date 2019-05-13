@@ -48,6 +48,22 @@ dependencies {
 
     //endregion
 
+    //region ViewModel and LiveData Libraries
+
+    implementation LifecycleLib.lifecycle_extension
+    kapt LifecycleLib.lifecycle_compile
+    implementation LifecycleLib.core_testing
+
+    //endregion
+
+    //region Room Libraries
+
+    implementation RoomLib.room
+    kapt RoomLib.room_compiler
+    androidTestImplementation RoomLib.room_testing
+
+    //endregion
+
     //region Kotlin Library
 
     implementation KotlinLib.kotlin_stdlib_JDK8
@@ -98,11 +114,14 @@ dependencies {
 
     //region Dagger 2 Dependencies
 
+    //Dagger Core
     implementation Dagger2.dagger2
+    kapt Dagger2.dagger2Compiler
+
+    //Dagger Android
     implementation Dagger2.dagger2Android
     implementation Dagger2.dagger2AndroidSupport
     kapt Dagger2.dagger2AndroidProcessor
-    kapt Dagger2.dagger2Compiler
 
     //endregion
 
