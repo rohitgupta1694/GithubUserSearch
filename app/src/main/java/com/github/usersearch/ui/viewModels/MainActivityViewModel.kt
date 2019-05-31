@@ -1,6 +1,5 @@
 package com.github.usersearch.ui.viewModels
 
-import com.github.usersearch.data.api.UserSearchAPI
 import com.github.usersearch.data.models.UserItem
 import com.github.usersearch.data.repository.UserSearchRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -9,13 +8,11 @@ import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
 import javax.inject.Inject
 
-class MainActivityViewModel @Inject constructor(val userSearchAPI: UserSearchAPI) {
+class MainActivityViewModel @Inject constructor(val userSearchRepository: UserSearchRepository) {
 
     val PAGE_SIZE = 100
 
     private var searchDisposable: Disposable? = null
-
-    private var userSearchRepository: UserSearchRepository
 
     internal val usersListPS: PublishSubject<List<UserItem>> = PublishSubject.create()
 
@@ -30,7 +27,6 @@ class MainActivityViewModel @Inject constructor(val userSearchAPI: UserSearchAPI
     internal var searchQuery: String? = null
 
     init {
-        userSearchRepository = UserSearchRepository(userSearchAPI)
         isLoadingPS.onNext(false)
         noMoreItemPS.onNext(false)
     }
